@@ -10,12 +10,7 @@ face_coordinates = trained_face_data.detectMultiScale(gray_scaled_img)
 print(face_coordinates)
 
 for (x, y, w, h) in face_coordinates:
-    r = random.randint(0,255)
-    g = random.randint(0, 255)
-    b = random.randint(0, 255)
-    rw = random.randint(1,10)
-    cv2.rectangle(img, (x, y), (x+w, y+h),
-                  (random.randint(0, 256), random.randint(0, 256), random.randint(0, 256)), random.randint(3,6))
+    cv2.rectangle(img, (x, y), (x+w, y+h),(random.randint(0, 256), random.randint(0, 256), random.randint(0, 256)), random.randint(3, 6))
 
 cv2.imshow('THOR', img)
 cv2.waitKey()
